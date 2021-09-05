@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: rgb(97, 98, 168);
+  width: 100%;
+}
+
+.round {
+  display: flex;
+  justify-content: center;
+  height: 15vh;
+  align-items: center;
+}
+
+.round h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.scores {
+  display: flex;
+  height: 20vh;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.human, .ties, .computer {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scores h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.humanCounter, .tiesCounter, .computerCounter {
+  padding-top: 20px;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.buttons {
+  height: 30vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+button {
+  width: 150px;
+  height: 8vh;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color:rgb(159, 201, 214);
+  border: 2px solid black;
+}
+
+button:focus{
+  outline: none;
+}
+
+button:active {
+  box-shadow: 3px 3px 10px rgb(24, 16, 16);
+}
+
+
+.hands {
+  height: 30vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 3em;
+}
+
+.hands img {
+  width: 30vw;
+  height: 30vw;
+  max-width: 230px;
+  max-height: 230px;
+}
+
+.humanRock {
+  transform: rotate(90deg);
+}
+.compRock{
+  transform: rotate(90deg) scaleY(-1);
+}
+.compPaper, .compScissors {
+  transform: rotate(180deg) scaleY(-1);
+}
+
+
+
+
+@keyframes shakePlayer {
+  0% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(70deg) translateX(-10vh);
+  }
+  100% {
+    transform: rotate(90deg);
+    display: none;
+  }
+}
+
+@keyframes shakeComp {
+  0% {
+    transform: rotate(90deg) scaleY(-1);
+  }
+  50% {
+    transform: rotate(110deg) scaleY(-1) translateX(-10vh);
+  }
+  100% {
+    transform: rotate(90deg) scaleY(-1);
+    display: none;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .round h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  .scores h2 {
+    font-size: 1.5rem;
+  }
+  
+  .scores p {
+    padding-top: .5em;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .scores {
+    justify-content: space-around;
+    height: auto;
+    margin: 0 1em;
+  }
+
+  .hands {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 800px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2em;
+  }
+
+  .hands img {
+    width: 25vw;
+    height: 25vw;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
