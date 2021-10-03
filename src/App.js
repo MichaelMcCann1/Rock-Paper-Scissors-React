@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -25,9 +25,9 @@ function App() {
   }
 
   const playGame = function(selection){
-    setShaking(true)
     setPlayerSelection()
     setComputerSelection()
+    setShaking(true)
     setRound(round => round + 1)
 
     setTimeout(() => {
@@ -63,11 +63,11 @@ function App() {
         {shaking && <img src="/Images/rock.png" className="humanRock" style={{animation: 'shakePlayer .5s 3'}} alt="rock"></img>}
         {shaking && <img src="/Images/rock.png" className="compRock" style={{animation: 'shakeComp .5s 3'}} alt="rock"></img>}
         {playerSelection === 0 && <img src="/Images/rock.png" className="humanRock" alt="rock"></img>}
-        {playerSelection === 1 && <img src="/Images/paper.png" className="humanPaper" alt="rock"></img>}
-        {playerSelection === 2 && <img src="/Images/scissors.png" className="humanScissors" alt="rock"></img>}
+        {playerSelection === 1 && <img src="/Images/paper.png" className="humanPaper" alt="paper"></img>}
+        {playerSelection === 2 && <img src="/Images/scissors.png" className="humanScissors" alt="scissors"></img>}
         {computerSelection === 0 && <img src="/Images/rock.png" className="compRock" alt="rock"></img>}
-        {computerSelection === 1 && <img src="/Images/paper.png" className="compPaper" alt="rock"></img>}
-        {computerSelection === 2 && <img src="/Images/scissors.png" className="compScissors" alt="rock"></img>}
+        {computerSelection === 1 && <img src="/Images/paper.png" className="compPaper" alt="paper"></img>}
+        {computerSelection === 2 && <img src="/Images/scissors.png" className="compScissors" alt="scissors"></img>}
       </section>
       <section className="buttons">
         <button className="rock" onClick={() => playGame(0)}>Rock</button>
