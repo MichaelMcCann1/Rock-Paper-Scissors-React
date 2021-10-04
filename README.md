@@ -1,5 +1,7 @@
 # Rock-Paper-Scissors-React
 
+**Live Link to Project:** https://mm-rockpaperscissors-react.web.app/
+
 The classic Rock Paper Scissors game made with ReactJS. Play against the computer and the game will keep track of the score. This game has a responsive interface and will work with any screen size. This game is an exact copy of the game I made [here with vanilla JavaSctipt](https://github.com/MichaelMcCann1/Rock-Paper-Scissors). Most of the logic for this version of the game is the same. The only major differences in this version is that variables are kept track of by using the `useState()` hook and images are shown dynamically with conditional rendering. Please refer to this repository for a more in-depth explanation of how the code works.
 
 <img src="https://github.com/MichaelMcCann1/Rock-Paper-Scissors/blob/main/RockPaperScissorsScreenshot.png" height="400px">
